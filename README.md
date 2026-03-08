@@ -1,8 +1,8 @@
-# 🔍 Algoraudit — AI-Powered Algorand Smart Contract Auditor
+# 🔍 AlgoCheck — AI-Powered Algorand Smart Contract Auditor
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fejevichka%2FAlgoraudit)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fejevichka%2FAlgoCheck)
 
-Algoraudit is an AI-powered tool that analyzes Algorand smart contracts, explains their behavior in plain language, highlights security risks with severity levels, and suggests improvements with clear references to the underlying TEAL code.
+AlgoCheck is an AI-powered tool that analyzes Algorand smart contracts, explains their behavior in plain language, highlights security risks with severity levels, and suggests improvements with clear references to the underlying TEAL code.
 
 ## ✨ Features
 
@@ -53,8 +53,8 @@ Algoraudit is an AI-powered tool that analyzes Algorand smart contracts, explain
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ejevichka/Algoraudit.git
-   cd Algoraudit
+   git clone https://github.com/ejevichka/AlgoCheck.git
+   cd AlgoCheck
    ```
 
 2. **Install dependencies**
@@ -163,7 +163,7 @@ We welcome contributions! Here's how you can help:
 
 ## ⚠️ Disclaimer
 
-Algoraudit is a tool to assist with smart contract security analysis. It should not be considered a substitute for professional security audits. Always:
+AlgoCheck is a tool to assist with smart contract security analysis. It should not be considered a substitute for professional security audits. Always:
 
 - Review findings manually
 - Conduct additional security testing
@@ -183,8 +183,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/ejevichka/Algoraudit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/ejevichka/Algoraudit/discussions)
+- **Issues**: [GitHub Issues](https://github.com/ejevichka/AlgoCheck/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ejevichka/AlgoCheck/discussions)
 - **Email**: [sirenko.helen@gmail.com]
 
 ---

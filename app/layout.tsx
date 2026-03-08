@@ -10,8 +10,8 @@ const publicSans = Public_Sans({ subsets: ["latin"] });
 
 const Logo = () => (
   <img
-    src="/images/algoraudit-favicon.ico"
-    alt="Algoraudit logo"
+    src="/images/algocheck-favicon.ico"
+    alt="AlgoCheck logo"
     className="h-8 w-8 flex-shrink-0 self-start"
   />
 );
@@ -24,25 +24,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Algoraudit — Algorand Smart Contract Auditor</title>
-        <link rel="shortcut icon" href="/images/algoraudit-favicon.ico" />
+        <title>AlgoCheck — Algorand Smart Contract Auditor</title>
+        <link rel="shortcut icon" href="/images/algocheck-favicon.ico" />
         <meta
           name="description"
-          content="Algoraudit: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
+          content="AlgoCheck: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
         />
-        <meta property="og:title" content="Algoraudit — Algorand Smart Contract Auditor" />
+        <meta property="og:title" content="AlgoCheck — Algorand Smart Contract Auditor" />
         <meta
           property="og:description"
-          content="Algoraudit: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
+          content="AlgoCheck: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
         />
-        <meta property="og:image" content="/images/algoraudit-og.png?v=2" />
+        <meta property="og:image" content="/images/algocheck-og.png?v=2" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Algoraudit — Algorand Smart Contract Auditor" />
+        <meta name="twitter:title" content="AlgoCheck — Algorand Smart Contract Auditor" />
         <meta
           name="twitter:description"
-          content="Algoraudit: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
+          content="AlgoCheck: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
         />
-        <meta name="twitter:image" content="/images/algoraudit-og.png?v=2" />
+        <meta name="twitter:image" content="/images/algocheck-og.png?v=2" />
       </head>
       <body className={publicSans.className}>
         <NuqsAdapter>
@@ -51,14 +51,14 @@ export default function RootLayout({
               <div className="flex gap-4 flex-col md:flex-row md:items-center">
                 <div className="flex items-center gap-2">
                   <Logo />
-                  <span className="text-sm font-semibold">Algoraudit</span>
+                  <span className="text-sm font-semibold">AlgoCheck</span>
                 </div>
                
               </div>
 
               <div className="flex justify-center">
                 <Button asChild variant="outline" size="default">
-                  <a href="https://github.com/ejevichka/Algoraudit" target="_blank">
+                  <a href="https://github.com/ejevichka/AlgoCheck" target="_blank">
                     <GithubIcon className="size-3" />
                     <span>GitHub</span>
                   </a>
