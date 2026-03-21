@@ -19,7 +19,7 @@ export default function AgentsPage() {
       endpoint="api/chat/structured_output"
       emptyStateComponent={InfoCard}
       placeholder={`Input your smart contract address to get the audit report`}
-      emoji="/images/algocheck-favicon.ico"
+      emoji="/logo.png"
     />
   );
 }

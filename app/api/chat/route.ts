@@ -43,8 +43,16 @@ export async function POST(req: NextRequest) {
      * https://js.langchain.com/docs/modules/model_io/models/
      */
     const model = new ChatOpenAI({
+      model: "z-ai/glm-4.5-air:free",
       temperature: 0.8,
-      model: "gpt-4o-mini",
+      configuration: {
+        baseURL: "https://openrouter.ai/api/v1",
+        apiKey: process.env.OPENROUTER_API_KEY,
+        defaultHeaders: {
+          "HTTP-Referer": "http://localhost:3000",
+          "X-Title": "AlgoAudit",
+        },
+      },
     });
 
     /**

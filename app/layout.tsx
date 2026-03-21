@@ -10,7 +10,7 @@ const publicSans = Public_Sans({ subsets: ["latin"] });
 
 const Logo = () => (
   <img
-    src="/images/algocheck-favicon.ico"
+    src="/logo.png"
     alt="AlgoCheck logo"
     className="h-8 w-8 flex-shrink-0 self-start"
   />
@@ -22,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <title>AlgoCheck — Algorand Smart Contract Auditor</title>
-        <link rel="shortcut icon" href="/images/algocheck-favicon.ico" />
+        <link rel="shortcut icon" href="/logo.png" />
         <meta
           name="description"
           content="AlgoCheck: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
@@ -35,14 +35,14 @@ export default function RootLayout({
           property="og:description"
           content="AlgoCheck: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
         />
-        <meta property="og:image" content="/images/algocheck-og.png?v=2" />
+        <meta property="og:image" content="/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AlgoCheck — Algorand Smart Contract Auditor" />
         <meta
           name="twitter:description"
           content="AlgoCheck: AI-powered auditing for Algorand smart contracts (TEAL/AVM)."
         />
-        <meta name="twitter:image" content="/images/algocheck-og.png?v=2" />
+        <meta name="twitter:image" content="/logo.png" />
       </head>
       <body className={publicSans.className}>
         <NuqsAdapter>
@@ -58,7 +58,7 @@ export default function RootLayout({
 
               <div className="flex justify-center">
                 <Button asChild variant="outline" size="default">
-                  <a href="https://github.com/ejevichka/AlgoCheck" target="_blank">
+                  <a href="https://github.com/gautamsharma99/AlgoCheck" target="_blank">
                     <GithubIcon className="size-3" />
                     <span>GitHub</span>
                   </a>

@@ -127,8 +127,16 @@ export async function POST(req: NextRequest) {
      * Function calling is currently only supported with ChatOpenAI models
      */
     const model = new ChatOpenAI({
+      model: "z-ai/glm-4.5-air:free",
       temperature: 0.8,
-      model: "gpt-4o-mini",
+      configuration: {
+        baseURL: "https://openrouter.ai/api/v1",
+        apiKey: process.env.OPENROUTER_API_KEY,
+        defaultHeaders: {
+          "HTTP-Referer": "http://localhost:3000",
+          "X-Title": "AlgoAudit",
+        },
+      },
     });
 
     /**
@@ -141,15 +149,13 @@ export async function POST(req: NextRequest) {
         number: z.number().describe("Ordinal number of the finding"),
         title: z.string().describe("Title of the vulnerability"),
         severity: z
-          .enum(["Low", "Medium", "High", "Critical"]) 
-          .optional()
+          .enum(["Low", "Medium", "High", "Critical"])
           .describe("Severity rating"),
         description: z
           .string()
           .describe("Plain-language description of the issue and impact"),
         triggering_opcodes: z
           .array(z.string())
-          .optional()
           .describe("Relevant TEAL opcodes or code snippets that triggered the warning"),
         recommendation: z
           .string()
@@ -166,23 +172,18 @@ export async function POST(req: NextRequest) {
           ),
         key_functions: z
           .array(z.string())
-          .default([])
           .describe("Bullet list of key functions or actions available"),
         actors_permissions: z
           .array(z.string())
-          .default([])
           .describe("Bullet list describing actors and their permissions"),
         state_changes: z
           .array(z.string())
-          .default([])
           .describe("Bullet list of global/local state mutated by the contract"),
         risks: z
           .array(z.string())
-          .default([])
           .describe("List of risk detections in short bullet form"),
         vulnerabilities: z
           .array(vulnerabilitySchema)
-          .default([])
           .describe("Detailed vulnerability entries with severity and recommendations"),
       })
       .describe("Algorand contract audit structured response");

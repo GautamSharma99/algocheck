@@ -5,7 +5,7 @@ export function GuideInfoBox(props: { children: ReactNode }) {
     <div className="max-w-[768px] w-full overflow-hidden flex-col gap-5 flex text-md my-16 mx-auto">
       <div className="text-center">
         <img 
-          src="/images/algocheck-og.png" 
+          src="/logo.png" 
           alt="AlgoCheck" 
           className="h-64 w-auto mx-auto"
         />
